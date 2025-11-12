@@ -1,0 +1,64 @@
+.scroll-container {
+  position: relative;
+  z-index: 2;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.section .content {
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 3;
+}
+
+.section h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.section h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.section p {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+.scroll-indicator {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-family: monospace;
+  color: #8b5cf6;
+}
+
+/* Different background colors for sections */
+.section-1 {
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a0a2e 100%);
+}
+
+.section-2 {
+  background: linear-gradient(180deg, #1a0a2e 0%, #2d1b4e 100%);
+}
+
+.section-3 {
+  background: linear-gradient(180deg, #2d1b4e 0%, #1a0a2e 100%);
+}
+
+.section-4 {
+  background: linear-gradient(180deg, #1a0a2e 0%, #0f051d 100%);
+}
+
+.section-5 {
+  background: linear-gradient(180deg, #0f051d 0%, #0a0a0a 100%);
+}
