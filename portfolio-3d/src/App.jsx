@@ -1,5 +1,5 @@
 import { Canvas3D } from './components/Canvas3D';
-import { Hero, Problem } from './components/Sections';
+import { Hero, Problem, Transformation } from './components/Sections';
 import { useScrollProgress } from './hooks/useScrollProgress';
 import './App.css';
 
@@ -19,12 +19,8 @@ function App() {
         {/* Problem Section */}
         <Problem />
 
-        <section className="section section-3">
-          <div className="content">
-            <h2>Section 3</h2>
-            <p>Smooth scroll-based animations</p>
-          </div>
-        </section>
+        {/* Transformation Section */}
+        <Transformation />
 
         <section className="section section-4">
           <div className="content">
