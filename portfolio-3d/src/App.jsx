@@ -1,4 +1,5 @@
 import { Canvas3D } from './components/Canvas3D';
+import { Hero } from './components/Sections';
 import { useScrollProgress } from './hooks/useScrollProgress';
 import './App.css';
 
@@ -12,13 +13,8 @@ function App() {
 
       {/* Scrollable Content */}
       <div className="scroll-container">
-        <section className="section section-1">
-          <div className="content">
-            <h1>Portfolio 3D</h1>
-            <p>Scroll to see the magic happen</p>
-            <p className="scroll-indicator">Progress: {Math.round(scrollProgress * 100)}%</p>
-          </div>
-        </section>
+        {/* Hero Section */}
+        <Hero />
 
         <section className="section section-2">
           <div className="content">
