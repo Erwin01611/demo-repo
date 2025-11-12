@@ -1,10 +1,17 @@
 import { Canvas } from '@react-three/fiber';
 // import { RotatingSphere } from './RotatingSphere';
 import { FloatingShapes } from './FloatingShapes';
+import { ChaosElements } from './ChaosElements';
 import './Canvas3D.css';
 
 export const Canvas3D = ({ scrollProgress }) => {
   console.log('[Canvas3D] Rendering with scrollProgress:', scrollProgress);
+
+  // Show FloatingShapes in Hero section (0-0.15)
+  const showFloating = scrollProgress < 0.15;
+
+  // Show ChaosElements in Problem section (0.1-0.3)
+  const showChaos = scrollProgress > 0.1 && scrollProgress < 0.3;
 
   return (
     <div className="canvas-container">
@@ -17,7 +24,10 @@ export const Canvas3D = ({ scrollProgress }) => {
         <ambientLight intensity={1} />
         <pointLight position={[10, 10, 10]} intensity={2} />
         <pointLight position={[-10, -10, -10]} intensity={1} />
-        <FloatingShapes scrollProgress={scrollProgress} />
+
+        {showFloating && <FloatingShapes scrollProgress={scrollProgress} />}
+        {showChaos && <ChaosElements scrollProgress={scrollProgress} />}
+
         {/* <RotatingSphere scrollProgress={scrollProgress} /> */}
       </Canvas>
     </div>

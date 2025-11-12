@@ -1,0 +1,119 @@
+.problem {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  position: relative;
+}
+
+.problem-content {
+  max-width: 800px;
+  padding: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.problem-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 100, 100, 0.8);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.problem-headline {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.problem-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem 0;
+}
+
+.problem-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(255, 100, 100, 0.15);
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.problem-item:first-child {
+  border-top: 1px solid rgba(255, 100, 100, 0.15);
+}
+
+.problem-bullet {
+  color: #ff6464;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.problem-question {
+  font-size: 2rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .problem-headline {
+    font-size: 2.5rem;
+  }
+
+  .problem-item {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+  }
+
+  .problem-bullet {
+    font-size: 1.2rem;
+  }
+
+  .problem-question {
+    font-size: 1.5rem;
+  }
+
+  .problem-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .problem-headline {
+    font-size: 2rem;
+  }
+
+  .problem-item {
+    font-size: 1rem;
+    gap: 0.75rem;
+  }
+
+  .problem-bullet {
+    font-size: 1rem;
+  }
+
+  .problem-question {
+    font-size: 1.2rem;
+  }
+
+  .problem-label {
+    font-size: 0.75rem;
+  }
+}

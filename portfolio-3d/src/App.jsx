@@ -1,5 +1,5 @@
 import { Canvas3D } from './components/Canvas3D';
-import { Hero } from './components/Sections';
+import { Hero, Problem } from './components/Sections';
 import { useScrollProgress } from './hooks/useScrollProgress';
 import './App.css';
 
@@ -16,12 +16,8 @@ function App() {
         {/* Hero Section */}
         <Hero />
 
-        <section className="section section-2">
-          <div className="content">
-            <h2>Section 2</h2>
-            <p>Watch the sphere rotate as you scroll</p>
-          </div>
-        </section>
+        {/* Problem Section */}
+        <Problem />
 
         <section className="section section-3">
           <div className="content">
