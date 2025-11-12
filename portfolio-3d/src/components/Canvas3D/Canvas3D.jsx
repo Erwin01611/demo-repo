@@ -5,6 +5,7 @@ import { ChaosElements } from './ChaosElements';
 import { OrderElements } from './OrderElements';
 import { CalendarViz } from './CalendarViz';
 import { MatchingViz } from './MatchingViz';
+import { PipelineViz } from './PipelineViz';
 import './Canvas3D.css';
 
 export const Canvas3D = ({ scrollProgress }) => {
@@ -22,8 +23,11 @@ export const Canvas3D = ({ scrollProgress }) => {
   // Show CalendarViz in Case Study 1 section (0.37-0.54)
   const showCalendar = scrollProgress > 0.37 && scrollProgress < 0.54;
 
-  // Show MatchingViz in Case Study 2 section (0.5-0.7)
-  const showMatching = scrollProgress > 0.5 && scrollProgress < 0.7;
+  // Show MatchingViz in Case Study 2 section (0.5-0.67)
+  const showMatching = scrollProgress > 0.5 && scrollProgress < 0.67;
+
+  // Show PipelineViz in Case Study 3 section (0.625-0.8)
+  const showPipeline = scrollProgress > 0.625 && scrollProgress < 0.8;
 
   return (
     <div className="canvas-container">
@@ -42,6 +46,7 @@ export const Canvas3D = ({ scrollProgress }) => {
         {showOrder && <OrderElements scrollProgress={scrollProgress} />}
         {showCalendar && <CalendarViz scrollProgress={scrollProgress} />}
         {showMatching && <MatchingViz scrollProgress={scrollProgress} />}
+        {showPipeline && <PipelineViz scrollProgress={scrollProgress} />}
 
         {/* <RotatingSphere scrollProgress={scrollProgress} /> */}
       </Canvas>

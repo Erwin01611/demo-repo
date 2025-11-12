@@ -1,5 +1,5 @@
 import { Canvas3D } from './components/Canvas3D';
-import { Hero, Problem, Transformation, CaseStudy1, CaseStudy2 } from './components/Sections';
+import { Hero, Problem, Transformation, CaseStudy1, CaseStudy2, CaseStudy3 } from './components/Sections';
 import { useScrollProgress } from './hooks/useScrollProgress';
 import './App.css';
 
@@ -27,6 +27,9 @@ function App() {
 
         {/* Case Study 2 */}
         <CaseStudy2 />
+
+        {/* Case Study 3 */}
+        <CaseStudy3 />
       </div>
     </>
   );
