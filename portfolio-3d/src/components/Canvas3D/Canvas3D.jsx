@@ -1,5 +1,6 @@
 import { Canvas } from '@react-three/fiber';
-import { RotatingSphere } from './RotatingSphere';
+// import { RotatingSphere } from './RotatingSphere';
+import { FloatingShapes } from './FloatingShapes';
 import './Canvas3D.css';
 
 export const Canvas3D = ({ scrollProgress }) => {
@@ -16,7 +17,8 @@ export const Canvas3D = ({ scrollProgress }) => {
         <ambientLight intensity={1} />
         <pointLight position={[10, 10, 10]} intensity={2} />
         <pointLight position={[-10, -10, -10]} intensity={1} />
-        <RotatingSphere scrollProgress={scrollProgress} />
+        <FloatingShapes scrollProgress={scrollProgress} />
+        {/* <RotatingSphere scrollProgress={scrollProgress} /> */}
       </Canvas>
     </div>
   );
