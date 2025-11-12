@@ -1,0 +1,141 @@
+.transformation {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  position: relative;
+}
+
+.transformation-content {
+  max-width: 1000px;
+  padding: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.transformation-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(100, 200, 255, 0.8);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.transformation-headline {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #00ffff, #0088ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.transformation-subtext {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  margin-bottom: 4rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.transformation-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.metric-card {
+  background: rgba(100, 200, 255, 0.05);
+  border: 1px solid rgba(100, 200, 255, 0.2);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.metric-card:hover {
+  background: rgba(100, 200, 255, 0.1);
+  border-color: rgba(100, 200, 255, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 136, 255, 0.2);
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00ffff;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.metric-label {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .transformation-headline {
+    font-size: 2.5rem;
+  }
+
+  .transformation-subtext {
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+  }
+
+  .transformation-metrics {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .metric-value {
+    font-size: 2rem;
+  }
+
+  .metric-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .transformation-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .transformation-headline {
+    font-size: 2rem;
+  }
+
+  .transformation-subtext {
+    font-size: 1rem;
+  }
+
+  .metric-value {
+    font-size: 1.8rem;
+  }
+
+  .metric-label {
+    font-size: 0.875rem;
+  }
+
+  .transformation-label {
+    font-size: 0.75rem;
+  }
+}
